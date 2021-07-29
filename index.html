@@ -10,6 +10,10 @@
 	<meta property="og:title" content="Shining Scholars Montessori" />
 	<meta property="og:description" content="My Page Description" />
 	<meta property="og:image" content="assets/og-image.png" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 
 	<link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css">
@@ -19,6 +23,9 @@
 		.gradient {
 			background: linear-gradient(90deg, #130fe9 0%, #51d6da 100%);
 		}
+		
+		body {font-family: "Lato", sans-serif}
+		.mySlides {display: none}
 		
 		
 
@@ -70,6 +77,35 @@
 	
 	<hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
 </nav>
+
+	
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/w3images/la.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Los Angeles</h3>
+      <p><b>We had the best time playing at Venice Beach!</b></p>   
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/w3images/ny.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>New York</h3>
+      <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/w3images/chicago.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Chicago</h3>
+      <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
+    </div>
+  </div>
+	</div>
+
 
 <div class="relative -mt-12 lg:-mt-24">
 	<svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -159,12 +195,39 @@
 					Shining Scholars Montessori
 				</a>
 			</div>
+		
+		
+			<div class="flex-1 mb-6">
+			
+				<a class="no-underline hover:no-underline font-bold text-2xl lg:text-4xl" style="color: #130fe9" href="#"> 
+					Shining Scholars Montessori
+				</a>
+			</div>
+		</div>
+	</div>
 
             
 
 				</footer>
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
 
-<script type="text/javascript" src="assets/script.js" /></script>
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+
+</script>
 
 </body>
 </html>
